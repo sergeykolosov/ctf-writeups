@@ -420,9 +420,9 @@ Complete exploit: [pwn02-linecrosser-exploit.py](./pwn02-linecrosser-exploit.py)
 
 If it was the case, that the remote challenge uses a different version of `libc`
 we'd still be able to extract the necessary information to attack it. Namely, we
-do this by writing that address using `create_custom_card_prompt()`, and then
-dereferencing it via `show_custom_card_answer()`, as long as we can correctly
-calculate the necessary index:
+do this by writing an address to be leaked using `create_custom_card_prompt()`,
+and then dereferencing it via `show_custom_card_answer()` (an index for it is
+obtained through a straightforward calculation):
 
 ```python
     ...
